@@ -1,18 +1,18 @@
-// determines if you match a breakpoint of a media screen size
 import { useState, useEffect } from "react";
 
-// pass in a query, and it tells us when it matches a particular breakpoint for screen size
+// a custom hook that determines if the screen matches a given media query
 const useMediaQuery = (query) => {
-    const [matches, setMatches] = useState(false);
+    const [matches, setMatches] = useState(false); // state that stores whether query matches screen size
 
+    // runs when matches or query changes
     useEffect(() => {
-        const media = window.matchMedia(query);
+        const media = window.matchMedia(query); // query listener
         if (media.matches !== matches) {
             setMatches(media.matches);
         }
         const listener = () => setMatches(media.matches);
-        window.addEventListener("resize", listener);
-        return () => window.removeEventListener("resize", listener);
+        window.addEventListener("resize", listener); // add listener to window's resize event
+        return () => window.removeEventListener("resize", listener); //cleanup
     }, [matches, query]);
 
     return matches;
