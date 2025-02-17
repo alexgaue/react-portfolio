@@ -63,8 +63,13 @@
     font-family: var(--font-opensans);
   }
 
-  .bg-brush {
+  .before\:content-brush::before {
+    content: "";
     background-image: url("./assets/brush.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 250%;
+    height: 250%;
   }
   .bg-person1 {
     background-image: url("./assets/person-1.png");
