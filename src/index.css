@@ -71,14 +71,38 @@
     width: 250%;
     height: 250%;
   }
-  .bg-person1 {
+  .before\:content-person1::before {
+    content: "";
     background-image: url("./assets/person-1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 105px;
+    top: -100px;
   }
-  .bg-person2 {
+  .before\:content-person2::before {
+    content: "";
     background-image: url("./assets/person-2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 105px;
+    top: -100px;
   }
-  .bg-person3 {
+  .before\:content-person3::before {
+    content: "";
     background-image: url("./assets/person-3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 105px;
+    top: -100px;
   }
 
   @media (min-width: var(--breakpoint-md)) {
